@@ -1,13 +1,146 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.App {
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 300px;
+  height: 450px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.screen {
+  width: 280px;
+  height: 200px;
+  /* background-color: white; */
+  border: 1px solid black;
+  border-radius: 8px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.display {
+  width: 280px;
+  height: 200px;
+}
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: beige;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.status img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.menu-box {
+  width: 120px;
+  /* height: inherit; */
+  background-color: black;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+h3 {
+  color: white;
+  padding-left: 5px;
+}
+.menu-list {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.menu-item {
+  padding-left: 5px;
+  font-family: cursive;
+  font-weight: 500;
+  height: 30px;
+  list-style: none;
+  /* background-color: aquamarine; */
+  border-bottom: 1px solid grey;
+  color: white;
+}
+.menu-item img {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.cover {
+  width: 280px;
+  height: 180px;
+}
+.mainmenu {
+  width: 300px;
+  height: 200px;
+  /* background-color: white;
+  border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.outer {
+  width: 180px;
+  height: 180px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.inner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+.menu {
+  position: absolute;
+  left: 68px;
+  top: 20px;
+}
+#control-btn img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+#prev {
+  left: 15px;
+  top: 80px;
+}
+#next {
+  right: 15px;
+  top: 80px;
+}
+#play {
+  left: 83px;
+  bottom: 20px;
 }

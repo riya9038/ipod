@@ -14,7 +14,7 @@ class Games extends React.Component {
 
         <img
           className="cover"
-          src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg"
+          src="https://png.pngtree.com/thumb_back/fh260/background/20200804/pngtree-color-fashion-game-card-pixel-game-start-background-image_373595.jpg"
           alt="cover"
         ></img>
       </div>

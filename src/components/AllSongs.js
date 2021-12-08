@@ -14,7 +14,7 @@ class AllSongs extends React.Component {
 
         <img
           className="cover"
-          src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg"
+          src="http://res.cloudinary.com/sapanadiwakar-in/image/upload/v1418068734/player-_1_mf1wje.png"
           alt="cover"
         ></img>
       </div>

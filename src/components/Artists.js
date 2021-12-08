@@ -14,7 +14,7 @@ class Artists extends React.Component {
 
         <img
           className="cover"
-          src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12EB7/production/_105659477_pop_gender_gap_976-nc.png"
           alt="cover"
         ></img>
       </div>

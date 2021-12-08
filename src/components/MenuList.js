@@ -16,7 +16,7 @@ function MenuList(props) {
       {/* ======menu box======== */}
 
       <div className="menu-box">
-        <h3> Ipod </h3>
+        <h3> MENU </h3>
         <ul className="menu-list">
           <li id="cover" className="menu-item">
             Cover Flow
@@ -34,7 +34,6 @@ function MenuList(props) {
       </div>
 
       {/* ======cover image======== */}
-
       <img
         className="cover"
         src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg"

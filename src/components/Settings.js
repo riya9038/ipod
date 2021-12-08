@@ -14,7 +14,7 @@ class Settings extends React.Component {
 
         <img
           className="cover"
-          src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg"
+          src="https://ak.picdn.net/shutterstock/videos/1065453634/thumb/1.jpg?ip=x480"
           alt="cover"
         ></img>
       </div>

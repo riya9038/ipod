@@ -1,39 +1,83 @@
 import React from "react";
-var ZingTouch = require("ZingTouch");
+import ZingTouch from "zingtouch";
 
 class MainMenu extends React.Component {
   constructor(props) {
     super();
   }
   componentDidMount() {}
-  openMenu = () => {
-    this.setState({
-      component: this.state.active,
-    });
-  };
 
-  openMainMenu = () => {
-    this.setState({
-      component: "menulist",
-    });
-  };
-
-  handleClick = () => {
+  handleClick = (props) => {
     let context = this;
-    var touchArea = document.getElementById("toucharea");
+    var touchArea = document.getElementById("outer");
     var myRegion = new ZingTouch.Region(touchArea);
 
     myRegion.bind(touchArea, "rotate", function (e) {
-      console.log(e.detail);
+      let distance = Math.abs(e.detail.distanceFromOrigin) % 360;
+      console.log("props", context.props);
+      console.log("this", context);
+      if (distance >= 0 && distance < 90) {
+        context.props.changeState("cover");
+        if (context.props.component === "menulist") {
+          document.getElementById("settings").classList.remove("active");
+          document.getElementById("music").classList.remove("active");
+          document.getElementById("games").classList.remove("active");
+          document.getElementById("cover").classList.add("active");
+        } else if (context.props.component === "music") {
+          context.props.changeState("albums");
+          document.getElementById("allSongs").classList.remove("active");
+          document.getElementById("artists").classList.remove("active");
+          document.getElementById("albums").classList.add("active");
+        }
+      } else if (distance >= 90 && distance < 180) {
+        context.props.changeState("music");
+        if (context.props.component === "menulist") {
+          document.getElementById("settings").classList.remove("active");
+          document.getElementById("cover").classList.remove("active");
+          document.getElementById("games").classList.remove("active");
+          document.getElementById("music").classList.add("active");
+        } else if (context.props.component === "music") {
+          context.props.changeState("artists");
+          document.getElementById("allSongs").classList.remove("active");
+          document.getElementById("albums").classList.remove("active");
+          document.getElementById("artists").classList.add("active");
+        }
+      } else if (distance >= 180 && distance < 270) {
+        context.props.changeState("games");
+        if (context.props.component === "menulist") {
+          document.getElementById("settings").classList.remove("active");
+          document.getElementById("cover").classList.remove("active");
+          document.getElementById("music").classList.remove("active");
+          document.getElementById("games").classList.add("active");
+        } else if (context.props.component === "music") {
+          context.props.changeState("allsongs");
+          document.getElementById("artists").classList.remove("active");
+          document.getElementById("albums").classList.remove("active");
+          document.getElementById("allSongs").classList.add("active");
+        }
+      } else if (distance >= 270 && distance < 360) {
+        context.props.changeState("settings");
+        if (context.props.component === "menulist") {
+          document.getElementById("games").classList.remove("active");
+          document.getElementById("cover").classList.remove("active");
+          document.getElementById("music").classList.remove("active");
+          document.getElementById("settings").classList.add("active");
+        } else if (context.props.component === "music") {
+          context.props.changeState("albums");
+          document.getElementById("allSongs").classList.remove("active");
+          document.getElementById("artists").classList.remove("active");
+          document.getElementById("albums").classList.add("active");
+        }
+      }
     });
   };
   render() {
-    const { Component } = this.props;
+    const { component, active, openMainMenu, openMenu } = this.props;
     return (
       <div className="mainmenu">
-        <div className="outer" onMouseDown={this.handleClick}>
-          <div className="inner" onClick={this.openMenu}></div>
-          <div id="control-btn" className="menu" onClick={this.openMainMenu}>
+        <div id="outer" onMouseMove={this.handleClick}>
+          <div className="inner" onClick={openMenu} draggable="false"></div>
+          <div id="control-btn" className="menu" onClick={openMainMenu}>
             MENU
           </div>
           <div id="control-btn" className="prev">
@@ -53,7 +97,7 @@ class MainMenu extends React.Component {
           <div id="control-btn" className="play-pause">
             <img
               id="play"
-              src="https://cdn-icons.flaticon.com/png/512/5540/premium/5540023.png?token=exp=1638957259~hmac=46f31146ac4218b165984fd4648bffc6"
+              src="https://cdn-icons-png.flaticon.com/512/27/27185.png"
               alt="play-pause"
             ></img>
           </div>

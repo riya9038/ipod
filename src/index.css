@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
 }
 
 code {
@@ -13,7 +14,7 @@ code {
 }
 .App {
   width: 100%;
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,13 +22,14 @@ code {
 .container {
   width: 300px;
   height: 450px;
-  background-color: grey;
+  background-color: wheat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 100px;
   border-radius: 10px;
+  box-shadow: 0.5px -0.5px 8px 1px black inset;
 }
 .screen {
   width: 280px;
@@ -41,6 +43,7 @@ code {
 .display {
   width: 280px;
   height: 200px;
+  border-radius: 8px;
 }
 .status {
   display: flex;
@@ -57,16 +60,19 @@ code {
 }
 .menu-box {
   width: 120px;
-  /* height: inherit; */
+  height: 182px;
   background-color: black;
   margin: 0px;
   display: flex;
   flex-direction: column;
-  display: none;
+  border-bottom-left-radius: 8px;
+  position: absolute;
+  /* display: none; */
 }
 h3 {
   color: white;
   padding-left: 5px;
+  margin-bottom: 10px;
 }
 .menu-list {
   padding: 0px;
@@ -82,7 +88,7 @@ h3 {
   height: 30px;
   list-style: none;
   /* background-color: aquamarine; */
-  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
   color: white;
 }
 .menu-item img {
@@ -93,6 +99,8 @@ h3 {
 .cover {
   width: 280px;
   height: 180px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .mainmenu {
   width: 300px;
@@ -104,28 +112,31 @@ h3 {
   justify-content: center;
   border-radius: 6px;
 }
-.outer {
+#outer {
   width: 180px;
   height: 180px;
   margin-top: 20px;
   border-radius: 50%;
-  background-color: lightblue;
+  background-color: gainsboro;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  box-shadow: 0.5px -0.5px 8px black;
 }
 .inner {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   background-color: white;
-  border: 1px solid black;
+  box-shadow: 1px -0.5px 8px black inset;
+  cursor: pointer;
 }
 .menu {
   position: absolute;
   left: 68px;
   top: 20px;
+  cursor: pointer;
 }
 #control-btn img {
   width: 20px;
@@ -143,4 +154,9 @@ h3 {
 #play {
   left: 83px;
   bottom: 20px;
+  width: 30px;
+  height: 30px;
+}
+.active {
+  background-color: gainsboro;
 }

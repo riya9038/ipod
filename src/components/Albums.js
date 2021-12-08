@@ -14,7 +14,7 @@ class Albums extends React.Component {
 
         <img
           className="cover"
-          src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg"
+          src="https://images.unsplash.com/photo-1619983081593-e2ba5b543168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG11c2ljJTIwYWxidW18ZW58MHx8MHx8&w=1000&q=80"
           alt="cover"
         ></img>
       </div>

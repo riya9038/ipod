@@ -19,7 +19,7 @@ function MenuList(props) {
         <h3> MENU </h3>
         <ul className="menu-list">
           <li id="cover" className="menu-item">
-            Cover Flow
+            Home Cover
           </li>
           <li id="music" className="menu-item">
             Music

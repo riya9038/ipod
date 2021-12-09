@@ -3,7 +3,7 @@ import MenuList from "./MenuList";
 import Cover from "./Cover";
 import Games from "./Games";
 import Settings from "./Settings";
-import Music from "./MusicList";
+import MusicList from "./MusicList";
 import AllSongs from "./AllSongs";
 import Albums from "./Albums";
 import Artists from "./Artists";
@@ -11,10 +11,8 @@ import Artists from "./Artists";
 class Screen extends React.Component {
   constructor(props) {
     super();
-    // this.state = {
-    //   component: "menulist",
-    // };
   }
+
   render() {
     const { component } = this.props;
     return (
@@ -23,7 +21,7 @@ class Screen extends React.Component {
         {component === "cover" && <Cover />}
         {component === "games" && <Games />}
         {component === "settings" && <Settings />}
-        {component === "music" && <Music />}
+        {component === "music" && <MusicList />}
         {component === "albums" && <Albums />}
         {component === "artists" && <Artists />}
         {component === "allsongs" && <AllSongs />}

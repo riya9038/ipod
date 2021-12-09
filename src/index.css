@@ -98,7 +98,7 @@ h3 {
 }
 .cover {
   width: 280px;
-  height: 180px;
+  height: 182px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -159,4 +159,5 @@ h3 {
 }
 .active {
   background-color: gainsboro;
+  color: black;
 }

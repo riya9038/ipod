@@ -5,7 +5,8 @@ class MainMenu extends React.Component {
   constructor(props) {
     super();
   }
-  componentDidMount() {}
+
+  // =====drag wheel=====
 
   handleClick = (props) => {
     let context = this;
@@ -14,8 +15,6 @@ class MainMenu extends React.Component {
 
     myRegion.bind(touchArea, "rotate", function (e) {
       let distance = Math.abs(e.detail.distanceFromOrigin) % 360;
-      console.log("props", context.props);
-      console.log("this", context);
       if (distance >= 0 && distance < 90) {
         context.props.changeState("cover");
         if (context.props.component === "menulist") {
@@ -71,11 +70,12 @@ class MainMenu extends React.Component {
       }
     });
   };
+
   render() {
-    const { component, active, openMainMenu, openMenu } = this.props;
+    const { openMainMenu, openMenu } = this.props;
     return (
       <div className="mainmenu">
-        <div id="outer" onMouseMove={this.handleClick}>
+        <div id="outer" onMouseDown={this.handleClick}>
           <div className="inner" onClick={openMenu} draggable="false"></div>
           <div id="control-btn" className="menu" onClick={openMainMenu}>
             MENU

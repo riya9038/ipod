@@ -6,15 +6,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      component: "menulist",
+      component: "cover",
       active: "cover",
     };
   }
+
+  //  =====control functions=====
+
   changeState = (id) => {
     this.setState({
       active: id,
     });
   };
+
   openMenu = () => {
     this.setState({
       component: this.state.active,
@@ -22,12 +26,21 @@ class App extends React.Component {
   };
 
   openMainMenu = () => {
-    if (this.state.component !== "menulist") {
+    if (
+      this.state.component === "albums" ||
+      this.state.component === "artists" ||
+      this.state.component === "allsongs"
+    ) {
+      this.setState({
+        component: "music",
+      });
+    } else {
       this.setState({
         component: "menulist",
       });
     }
   };
+
   render() {
     const { component, active } = this.state;
     return (

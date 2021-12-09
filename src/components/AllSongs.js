@@ -4,6 +4,8 @@ class AllSongs extends React.Component {
   render() {
     return (
       <div className="display">
+        {/* ======status bar======== */}
+
         <div className="status">
           <img
             className="battery"
@@ -11,6 +13,8 @@ class AllSongs extends React.Component {
             src="https://cdn-icons-png.flaticon.com/512/18/18266.png"
           />
         </div>
+
+        {/* ======cover image======== */}
 
         <img
           className="cover"
